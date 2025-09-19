@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries of the World</title>
+  <style>
+    /* ===== Global Styles ===== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      padding: 20px;
+      background: linear-gradient(135deg, #e0f2ff, #f4f4f9);
+      text-align: center;
+      color: #333;
+    }
+
+    h1 {
+      margin-bottom: 25px;
+      font-size: 2.2rem;
+      color: #222;
+      font-weight: 600;
+    }
+
+    /* ===== Search Box ===== */
+    input {
+      padding: 12px 16px;
+      width: 320px;
+      max-width: 90%;
+      border: 2px solid #007bff;
+      border-radius: 30px;
+      font-size: 16px;
+      outline: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    input:focus {
+      border-color: #0056b3;
+      box-shadow: 0 4px 10px rgba(0,123,255,0.2);
+    }
+
+    /* ===== Countries Grid ===== */
+    #results {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      padding: 10px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+      color: #007bff;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* ===== Details Section ===== */
+    #details {
+      margin-top: 40px;
+      display: none;
+      text-align: left;
+      max-width: 700px;
+      margin-inline: auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    #details h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      color: #007bff;
+      text-align: center;
+    }
+
+    #details img {
+      display: block;
+      margin: 0 auto 15px auto;
+      width: 180px;
+      border-radius: 10px;
+      border: 2px solid #eee;
+    }
+
+    #details p {
+      margin: 8px 0;
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #444;
+    }
+
+    #details button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      background: #007bff;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    #details button:hover {
+      background: #0056b3;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Where in the world?</h1>
+  <input type="text" id="search" placeholder="Type a country name..." />
+  <div id="results"></div>
+  <div id="details"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

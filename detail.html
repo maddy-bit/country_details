@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f9;
+    }
+    a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .flag {
+      width: 250px;
+      margin-bottom: 20px;
+      border: 2px solid #ddd;
+    }
+    .info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .info h2 {
+      margin-bottom: 15px;
+    }
+    .info p {
+      margin: 8px 0;
+    }
+    .borders a {
+      margin-right: 8px;
+      background: #007bff;
+      color: #fff;
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html">&larr; Back</a>
+  <div class="container">
+    <img id="flag" class="flag" alt="Country flag">
+    <div class="info" id="info"></div>
+  </div>
+
+  <script src="detail.js"></script>
+</body>
+</html>
